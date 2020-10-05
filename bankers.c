@@ -42,32 +42,19 @@ int main()
             		scanf("%d", &maximum_claim[i][j]);
         	}
     	}
+	//VIPLAV
  
-	printf("\nThe Claim Vector is: ");
-    	for (i = 0; i < resources; i++) 
-	{
-	        printf("\t%d", maxres[i]);
-	}
- 
-    	printf("\nThe Allocated Resource Table:\n");
-    	for (i = 0; i < processes; i++) 
-	{
-	        for (j = 0; j < resources; j++) 
-		{
-            		printf("\t%d", current[i][j]);
-        	}
-		printf("\n");
-    	}
- 
-    	printf("\nThe Maximum Claim Table:\n");
-    	for (i = 0; i < processes; i++) 
-	{
-        	for (j = 0; j < resources; j++) 
-		{
-		        printf("\t%d", maximum_claim[i][j]);
-        	}
-        	printf("\n");
-    	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//VIPLAV END
+	
  
     	for (i = 0; i < processes; i++) 
 	{
@@ -82,50 +69,16 @@ int main()
 	{
         	printf("\t%d", allocation[i]);
     	}
+	//AAKASH START
  
-    	for (i = 0; i < resources; i++) 
-	{
-	        available[i] = maxres[i] - allocation[i];
-	}
- 
-    	printf("\nAvailable resources:");
-    	for (i = 0; i < resources; i++) 
-	{
-        	printf("\t%d", available[i]);
-    	}
-    	printf("\n");
- 
-    	while (counter != 0) 
-	{
-        	safe = 0;
-        	for (i = 0; i < processes; i++) 
-		{
-            		if (running[i]) 
-			{
-                		exec = 1;
-                		for (j = 0; j < resources; j++) 
-				{
-                    			if (maximum_claim[i][j] - current[i][j] > available[j]) 
-					{
-                        			exec = 0;
-                        			break;
-                    			}
-                		}
-                		if (exec) 
-				{
-                    			printf("\nProcess%d is executing\n", i + 1);
-                    			running[i] = 0;
-                    			counter--;
-                    			safe = 1;
- 
-                    			for (j = 0; j < resources; j++) 
-					{
-                        			available[j] += current[i][j];
-                    			}
-			                break;
-                		}
-            		}
-        	}
+    	
+	
+	
+	
+	
+	
+	
+	//AAKASH END
         	if (!safe) 
 		{
             		printf("\nThe processes are in unsafe state.\n");
