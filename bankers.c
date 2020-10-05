@@ -43,15 +43,32 @@ int main()
         	}
     	}
 	//VIPLAV
+	printf("\nThe Claim Vector is: ");
+        for (i = 0; i < resources; i++) 
+    {
+            printf("\t%d", maxres[i]);
+    }
  
-	
-	
-	
-	
-	
-	
-	
-	
+        printf("\nThe Allocated Resource Table:\n");
+        for (i = 0; i < processes; i++) 
+    {
+            for (j = 0; j < resources; j++) 
+        {
+                    printf("\t%d", current[i][j]);
+            }
+        printf("\n");
+        }
+ 
+        printf("\nThe Maximum Claim Table:\n");
+        for (i = 0; i < processes; i++) 
+    {
+            for (j = 0; j < resources; j++) 
+        {
+                printf("\t%d", maximum_claim[i][j]);
+            }
+            printf("\n");
+        }
+ 
 	
 	//VIPLAV END
 	
