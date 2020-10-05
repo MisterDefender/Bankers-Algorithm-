@@ -87,13 +87,20 @@ int main()
         	printf("\t%d", allocation[i]);
     	}
 	//AAKASH START
+ for (i = 0; i < resources; i++) 
+    {
+            available[i] = maxres[i] - allocation[i];
+    }
  
-    	
-	
-	
-	
-	
-	
+        printf("\nAvailable resources:");
+        for (i = 0; i < resources; i++) 
+    {
+            printf("\t%d", available[i]);
+        }
+        printf("\n");
+	//st
+ 
+      
 	
 	//AAKASH END
         	if (!safe) 
